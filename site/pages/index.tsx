@@ -49,7 +49,7 @@ export default function Home({
       />
       <div className="container xl:max-w-screen-xl mx-auto py-12 px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {products.slice(0, 3).map((product: any, i: number) => (
+          {products.slice(0).map((product: any, i: number) => (
             <ProductCard
               key={product.id}
               product={product}
