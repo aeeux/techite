@@ -26,13 +26,19 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
           </Link>
           <nav className={s.navMenu}>
             <Link href="/search">
-              <a className={s.link}>All</a>
+              <a className={s.link}>Produkter</a>
             </Link>
-            {links?.map((l) => (
+            {/* {links?.map((l) => (
               <Link href={l.href} key={l.href}>
                 <a className={s.link}>{l.label}</a>
               </Link>
-            ))}
+            ))} */}
+             <Link href="/about">
+              <a className={s.link}>Om os</a>
+            </Link>
+            <Link href="/contact">
+              <a className={s.link}>Kontakt</a>
+            </Link>
           </nav>
         </div>
         {process.env.COMMERCE_SEARCH_ENABLED && (
