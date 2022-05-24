@@ -1,5 +1,5 @@
 .control {
-  @apply bg-violet absolute bottom-10 right-10 flex flex-row
+  @apply bg-contact-dark absolute bottom-10 right-10 flex flex-row
   border-accent-0 border text-accent-0 z-30 shadow-xl select-none;
   height: 48px;
 }
@@ -8,11 +8,12 @@
 .rightControl {
   @apply px-9 cursor-pointer;
   transition: background-color 0.2s ease;
+  color: white;
 }
 
 .leftControl:hover,
 .rightControl:hover {
-  background-color: var(--violet-dark);
+  background-color: #5d79fc;
 }
 
 .leftControl:focus,
