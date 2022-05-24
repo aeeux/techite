@@ -25,7 +25,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
   return (
     <>
       <Container className="max-w-none w-full" clean>
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 mb-10">
           <h2 className="mx-auto font-bold mb-4 text-2xl">Shopping Cart</h2>
           <div className="flex items-center space-x-2 text-gray-400 text-sm">
             <a href="#" className="hover:underline hover:text-gray-600">
