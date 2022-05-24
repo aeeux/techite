@@ -9,6 +9,8 @@ import {
   selectDefaultOptionFromProduct,
   SelectedOptions,
 } from '../helpers'
+import usePrice from '@framework/product/use-price'
+import ProductTag from '../ProductTag'
 
 interface ProductSidebarProps {
   product: Product
@@ -16,6 +18,11 @@ interface ProductSidebarProps {
 }
 
 const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
+  const { price } = usePrice({
+    amount: product.price.value,
+    baseAmount: product.price.retailPrice,
+    currencyCode: product.price.currencyCode!,
+  })
   const addItem = useAddItem()
   const { openSidebar } = useUI()
   const [loading, setLoading] = useState(false)
@@ -47,22 +54,9 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         selectedOptions={selectedOptions}
         setSelectedOptions={setSelectedOptions}
       />
-      <Text
-        className="pb-4 break-words w-full max-w-xl"
-        html={product.descriptionHtml || product.description}
-      />
-      <p className="text-gray-400 text-sm">Gaming PC</p>
+      <ProductTag name={product.name} price={`${price}`} />
+      <p className="text-gray-400 text-sm mb-32">Gaming PC</p>
 
-<div className="flex items-center space-x-4 my-4">
-  <div>
-    <div className="">
-      <span className="font-bold text-3xl">
-        10.000
-      </span>
-      <span className="text-gray-400 ml-1 mt-1">Kr</span>
-    </div>
-  </div>
-</div>
       <div>
         {process.env.COMMERCE_CART_ENABLED && (
           <Button
@@ -81,14 +75,10 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
       </div>
       <div className="mt-6">
         <Collapse title="Beskrivelse">
-        Cougar Darkblader X5 kabinet
-Intel 12900KF i9 Processor - 16 kerner, 3.2 Ghz base (5.2 Ghz Turbo)
-Artic Liquid Freezer II 360 vandkøling
-Gigabyte Z690 UD AX bundkort
-Zotac Gaming RTX 3070 Ti Trinity OC grafikkort
-Kingston 1 TB SSD NVMe
-16 GB Kingston Fury Beast DDR5-5600 RAM (2x8 GB)
-Corsair RM750x 750W strømforsyning*
+          <Text
+            className="pb-4 break-words w-full max-w-xl"
+            html={product.descriptionHtml || product.description}
+          />
         </Collapse>
         <Collapse title="Garanti">
           This is a limited edition production run. Printing starts when the
