@@ -25,6 +25,50 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
   return (
     <>
       <Container className="max-w-none w-full" clean>
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+          <h2 className="mx-auto font-bold mb-4 text-2xl">Shopping Cart</h2>
+          <div className="flex items-center space-x-2 text-gray-400 text-sm">
+            <a href="#" className="hover:underline hover:text-gray-600">
+              Hjem
+            </a>
+            <span>
+              <svg
+                className="h-5 w-5 leading-none text-gray-300"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </span>
+            <a href="#" className="hover:underline hover:text-gray-600">
+              Gaming Computer
+            </a>
+            <span>
+              <svg
+                className="h-5 w-5 leading-none text-gray-300"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </span>
+            <span>My Shopping Cart</span>
+          </div>
+        </div>
         <div className={cn(s.root, 'fit')}>
           <div className={cn(s.main, 'fit')}>
             <ProductTag
@@ -64,30 +108,6 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
             className={s.sidebar}
           />
         </div>
-        <hr className="mt-7 border-accent-2" />
-        <section className="py-12 px-6 mb-10">
-          <Text variant="sectionHeading">Related Products</Text>
-          <div className={s.relatedProductsGrid}>
-            {relatedProducts.map((p) => (
-              <div
-                key={p.path}
-                className="animated fadeIn bg-accent-0 border border-accent-2"
-              >
-                <ProductCard
-                  noNameTag
-                  product={p}
-                  key={p.path}
-                  variant="simple"
-                  className="animated fadeIn"
-                  imgProps={{
-                    width: 300,
-                    height: 300,
-                  }}
-                />
-              </div>
-            ))}
-          </div>
-        </section>
       </Container>
       <SEO
         title={product.name}
