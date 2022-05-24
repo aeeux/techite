@@ -14,7 +14,7 @@ export async function getStaticProps({
 }: GetStaticPropsContext) {
   const config = { locale, locales }
   const productsPromise = commerce.getAllProducts({
-    variables: { first: 6 },
+    variables: { first: 8 },
     config,
     preview,
     // Saleor provider only
@@ -49,7 +49,7 @@ export default function Home({
       />
       <div className="container xl:max-w-screen-xl mx-auto py-12 px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {products.slice(0).map((product: any, i: number) => (
+          {products.map((product: any, i: number) => (
             <ProductCard
               key={product.id}
               product={product}
