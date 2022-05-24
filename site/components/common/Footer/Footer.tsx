@@ -17,10 +17,10 @@ function Footer() {
             <Link href="/">
             <a className="my-3 block" >Kontakt os <span className="text-teal-600 text-xs p-1"></span></a>
             </Link>
-            <Link Link href="tel:004571963369">
+            <Link href="tel:004571963369">
             <a className="my-3 block" >+45 71 963 369 <span className="text-teal-600 text-xs p-1"></span></a>
             </Link>
-            <Link Link href="mailto:mail@erpgruppen.dk">
+            <Link href="mailto:mail@erpgruppen.dk">
             <a className="my-3 block" >Salg@techite.dk <span className="text-teal-600 text-xs p-1"></span></a>
             </Link>
           </div>
@@ -33,7 +33,7 @@ function Footer() {
             <a className="my-3 block" href="/" >Facebook <span className="text-teal-600 text-xs p-1"></span></a><a className="my-3 block" href="/" >Instagram <span className="text-teal-600 text-xs p-1"></span></a><a className="my-3 block" href="/" >LinkedIn <span className="text-teal-600 text-xs p-1"></span></a>
           </div>
         </div>
-        <div class="sm:flex sm:flex-wrap mt-6 pt-6 sm:mt-12 sm:pt-12 border-t">
+        <div className="sm:flex sm:flex-wrap mt-6 pt-6 sm:mt-12 sm:pt-12 border-t">
 
         <div className="bg-gray-100 w-full" ><div className="float-right bg-gray-100 w-full text-center pr-10 mb-6">
           <p className=" bg-gray-100 w-full inline-block text-center p-3 pb-0 mb-0">Copyright © 2022 Techite A/S</p>
