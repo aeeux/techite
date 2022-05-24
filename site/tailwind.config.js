@@ -10,6 +10,11 @@ module.exports = {
         '8xl': '1920px',
       },
       colors: {
+        'button-b': '#5D79FC',
+        'desc-lg': '#959393',
+        'product-gray': '#F2F2F2',
+        'history-yellow': '#CFDB40',
+        'contact-dark': '#1F1F22',
         primary: 'var(--primary)',
         'primary-2': 'var(--primary-2)',
         secondary: 'var(--secondary)',
