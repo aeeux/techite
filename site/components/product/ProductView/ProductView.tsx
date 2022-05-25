@@ -24,10 +24,9 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
 
   return (
     <>
-      <Container className="max-w-none w-full" clean>
+      <Container className="max-w-none w-full mt-12" clean>
         <div className="mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-          <h2 className="mx-auto font-bold mb-4 text-2xl">Shopping Cart</h2>
-          <div className="flex items-center space-x-2 text-gray-400 text-sm">
+          <div className="flex items-center space-x-2 text-gray-400 text-sm mb-24">
             <a href="#" className="hover:underline hover:text-gray-600">
               Hjem
             </a>
@@ -66,21 +65,21 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
                 />
               </svg>
             </span>
-            <span>My Shopping Cart</span>
+            <span>{product.name}</span>
           </div>
         </div>
-        <div className={cn(s.root, 'fit')}>
-          <div className={cn(s.main, 'fit')}>
-            <div className={s.sliderContainer}>
-              <ProductSlider key={product.id}>
+        <div className="grid grid-cols-2">
+          <div className="">
+            <div className="mx-24 mb-56">
+              <ProductSlider key={product.id} className="">
                 {product.images.map((image, i) => (
                   <div key={image.url} className={s.imageContainer}>
                     <Image
                       className={s.img}
                       src={image.url!}
                       alt={image.alt || 'Product Image'}
-                      width={600}
-                      height={600}
+                      width={400}
+                      height={400}
                       priority={i === 0}
                       quality="85"
                     />
@@ -100,7 +99,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
           <ProductSidebar
             key={product.id}
             product={product}
-            className={s.sidebar}
+            className="mx-44"
           />
         </div>
       </Container>
