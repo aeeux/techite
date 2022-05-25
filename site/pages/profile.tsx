@@ -30,7 +30,7 @@ export default function Profile() {
           <div className="flex flex-col divide-accent-2 divide-y">
             <div className="flex flex-row items-center space-x-4 py-4">
               <span className="text-lg font-medium text-accent-600 flex-1">
-                Full Name
+                Fulde Name
               </span>
               <span>
                 {data.firstName} {data.lastName}
