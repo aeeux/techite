@@ -27,7 +27,7 @@ const ProductSlider: React.FC<ProductSliderProps> = ({
 
   const [ref, slider] = useKeenSlider<HTMLDivElement>({
     loop: true,
-    slides: { perView: 1 },
+    slides: { perView: 2 },
     created: () => setIsMounted(true),
     slideChanged(s) {
       const slideNumber = s.track.details.rel
@@ -101,7 +101,10 @@ const ProductSlider: React.FC<ProductSliderProps> = ({
         })}
       </div>
 
-      <a.div className="" ref={thumbsContainerRef}>
+      <a.div
+        className="w-full overflow-y-hidden overflow-x-auto whitespace-nowrap content-box"
+        ref={thumbsContainerRef}
+      >
         {slider &&
           Children.map(children, (child, idx) => {
             if (isValidElement(child)) {
