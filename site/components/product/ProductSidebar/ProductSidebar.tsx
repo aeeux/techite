@@ -81,9 +81,7 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
           />
         </Collapse>
         <Collapse title="Garanti">
-          This is a limited edition production run. Printing starts when the
-          drop ends. Reminder: Bad Boys For Life. Shipping may take 10+ days due
-          to COVID-19.
+        Når du køber en Techite Gaming computer, så udskifter eller montere vi nye komponenter kvit og frit indenfor vores 3 års garanti. Du betaler kun for varen. Der kan i en periode, henover 3 år, opstå et behov for at foretage opgraderinger – f.eks. et nyt grafikkort, mere RAM eller diskplads. Det skal der selvfølgelig være plads til.
         </Collapse>
       </div>
     </div>
