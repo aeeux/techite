@@ -43,10 +43,10 @@ export default function Home({
   return (
     <>
       <MainHero />
-      <Hero
+      {/* <Hero
         headline=" Dessert dragée halvah croissant."
         description="Cupcake ipsum dolor sit amet lemon drops pastry cotton candy. Sweet carrot cake macaroon bonbon croissant fruitcake jujubes macaroon oat cake. Soufflé bonbon caramels jelly beans. Tiramisu sweet roll cheesecake pie carrot cake. "
-      />
+      /> */}
       <div className="container xl:max-w-screen-xl mx-auto py-12 px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
           {products.map((product: any, i: number) => (
