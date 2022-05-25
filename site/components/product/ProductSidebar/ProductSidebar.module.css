@@ -55,6 +55,7 @@
 
 .button {
   width: 100%;
+  @apply 2xl:w-4/12;
 }
 
 .wishlistButton {
