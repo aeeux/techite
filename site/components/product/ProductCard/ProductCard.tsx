@@ -120,7 +120,7 @@ const ProductCard: FC<Props> = ({
               type="button"
               className="w-full font-semibold rounded-sm bg-button-b hover:bg-blue-600 text-white mt-4 text-sm py-1"
             >
-              Køb nu
+              Læs mere
             </button>
         </div>
       </a>
