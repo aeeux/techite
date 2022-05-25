@@ -42,7 +42,7 @@ export default function Wishlist() {
   return (
     <Container className="pt-4">
       <div className="mb-20">
-        <Text variant="pageHeading">My Wishlist</Text>
+        <Text variant="pageHeading">Min ønskeliste</Text>
         <div className="group flex flex-col">
           {isLoading ? (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -58,10 +58,10 @@ export default function Wishlist() {
                 <Heart className="absolute" />
               </span>
               <h2 className="pt-6 text-2xl font-bold tracking-wide text-center">
-                Your wishlist is empty
+                Din ønskeliste er tom
               </h2>
               <p className="text-accent-6 px-10 text-center pt-2">
-                Biscuit oat cake wafer icing ice cream tiramisu pudding cupcake.
+                Gå venligst ind på produkt oversigten og find et produkt du vil tilføje
               </p>
             </div>
           ) : (
