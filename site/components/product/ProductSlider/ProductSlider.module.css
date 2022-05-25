@@ -1,31 +1,3 @@
-.root {
-  @apply relative w-full h-full select-none;
-  overflow: hidden;
-}
-
-.slider {
-  @apply relative h-full transition-opacity duration-150;
-  opacity: 0;
-}
-
-.slider.show {
-  opacity: 1;
-}
-
-.thumb {
-  @apply overflow-hidden inline-block cursor-pointer h-full;
-  width: 125px;
-  width: calc(100% / 3);
-}
-
-.thumb.selected {
-  @apply bg-white;
-}
-
-.thumb img {
-  height: 85% !important;
-}
-
 .album {
   width: 100%;
   height: 100%;
@@ -43,6 +15,10 @@
   display: none;
 }
 
+.thumb {
+  display: none;
+}
+
 @screen md {
   .thumb:hover {
     transform: scale(1.02);
@@ -50,8 +26,5 @@
 
   .album {
     height: 182px;
-  }
-  .thumb {
-    width: 235px;
   }
 }
