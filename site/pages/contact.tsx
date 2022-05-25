@@ -1,9 +1,9 @@
-import Contact from '@components/contact/Contact'
+import ContactForm from '@components/contact/ContactForm'
 
-export default function About () {
+export default function About() {
   return (
     <div>
-      <Contact />
-      </div>
+      <ContactForm />
+    </div>
   )
 }
