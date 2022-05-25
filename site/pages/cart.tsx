@@ -56,10 +56,10 @@ export default function Cart() {
               <Bag className="absolute" />
             </span>
             <h2 className="pt-6 text-2xl font-bold tracking-wide text-center">
-              Your cart is empty
+            kurven er desværre tom
             </h2>
             <p className="text-accent-6 px-10 text-center pt-2">
-              Biscuit oat cake wafer icing ice cream tiramisu pudding cupcake.
+            Gå ind på vores produkt oversigt for at finde noget for dig!
             </p>
           </div>
         ) : error ? (
@@ -67,9 +67,7 @@ export default function Cart() {
             <span className="border border-white rounded-full flex items-center justify-center w-16 h-16">
               <Cross width={24} height={24} />
             </span>
-            <h2 className="pt-6 text-xl font-light text-center">
-              We couldn’t process the purchase. Please check your card
-              information and try again.
+            <h2 className="pt-6 text-xl font-light text-center"> Vi kunne ikke behandle købet. Tjek venligst dit kort oplysninger og prøv igen.
             </h2>
           </div>
         ) : success ? (
@@ -78,13 +76,13 @@ export default function Cart() {
               <Check />
             </span>
             <h2 className="pt-6 text-xl font-light text-center">
-              Thank you for your order.
+              Tak for din ordre.
             </h2>
           </div>
         ) : (
           <div className="lg:px-0 sm:px-6 flex-1">
-            <Text variant="pageHeading">My Cart</Text>
-            <Text variant="sectionHeading">Review your Order</Text>
+            <Text variant="pageHeading">Min kurv</Text>
+            <Text variant="sectionHeading">Gennemgå din ordre</Text>
             <ul className="py-6 space-y-6 sm:py-0 sm:space-y-0 sm:divide-y sm:divide-accent-2 border-b border-accent-2">
               {data!.lineItems.map((item: any) => (
                 <CartItem
@@ -96,8 +94,7 @@ export default function Cart() {
             </ul>
             <div className="my-6">
               <Text>
-                Before you leave, take a look at these items. We picked them
-                just for you
+              Before you leave, take a look at these items. We picked them  just for you
               </Text>
               <div className="flex py-6 space-x-6">
                 {[1, 2, 3, 4, 5, 6].map((x) => (
@@ -122,7 +119,7 @@ export default function Cart() {
                   <MapPin />
                 </div>
                 <div className="text-sm text-center font-medium">
-                  <span className="uppercase">+ Add Shipping Address</span>
+                  <span className="uppercase">+ Tilføj forsendelsesadresse</span>
                   {/* <span>
                     1046 Kearny Street.<br/>
                     San Franssisco, California
@@ -136,7 +133,7 @@ export default function Cart() {
                   <CreditCard />
                 </div>
                 <div className="text-sm text-center font-medium">
-                  <span className="uppercase">+ Add Payment Method</span>
+                  <span className="uppercase">+ Tilføj betalingsmetode</span>
                   {/* <span>VISA #### #### #### 2345</span> */}
                 </div>
               </div>
@@ -149,12 +146,12 @@ export default function Cart() {
                 <span>{subTotal}</span>
               </li>
               <li className="flex justify-between py-1">
-                <span>Taxes</span>
-                <span>Calculated at checkout</span>
+                <span>Moms</span>
+                <span>Beregnes ved kassen</span>
               </li>
               <li className="flex justify-between py-1">
-                <span>Estimated Shipping</span>
-                <span className="font-bold tracking-wide">FREE</span>
+                <span>Anslået forsendelse</span>
+                <span className="font-bold tracking-wide">GRATIS</span>
               </li>
             </ul>
             <div className="flex justify-between border-t border-accent-2 py-3 font-bold mb-10">
@@ -166,17 +163,17 @@ export default function Cart() {
             <div className="w-full lg:w-72">
               {isEmpty ? (
                 <Button href="/" Component="a" width="100%">
-                  Continue Shopping
+                  Fortsætte med at handle
                 </Button>
               ) : (
                 <>
                   {process.env.COMMERCE_CUSTOMCHECKOUT_ENABLED ? (
                     <Button Component="a" width="100%" onClick={goToCheckout}>
-                      Proceed to Checkout ({total})
+                      Gå til kassen ({total})
                     </Button>
                   ) : (
                     <Button href="/checkout" Component="a" width="100%">
-                      Proceed to Checkout
+                      Gå til kassen
                     </Button>
                   )}
                 </>
