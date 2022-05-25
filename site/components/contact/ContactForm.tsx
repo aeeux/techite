@@ -1,6 +1,6 @@
 function ContactForm() {
   return (
-    <div className=" md:flex md:mx-0">
+    <div className=" md:flex max-w-8xl mx-auto">
       <div className="w-1/3 md:w-2/h-24 md:h-screen bg-white md:bg-black py-12 px-6 space-y-12">
         <h2 className="text-black md:text-white md:text-3xl text-2xl font-semibold mt-12 md:mx-5">
           Kontakt informationer
