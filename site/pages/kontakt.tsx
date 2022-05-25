@@ -3,7 +3,7 @@ import { Layout } from '@components/common'
 
 export default function Contact() {
   return (
-    <div>
+    <div className="mx-auto">
       <ContactForm />
     </div>
   )
