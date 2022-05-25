@@ -115,6 +115,13 @@ const ProductCard: FC<Props> = ({
             name={product.name}
             price={`${price} ${product.price?.currencyCode}`}
           />
+           <p className="text-xs mt-2 text-desc-lg">Cougar Darkblader X5 kabinet, Intel i3 Processor 12100F - 4 kerner, 3,3 Ghz base (4,3 Ghz Turbo)....</p>
+          <button
+              type="button"
+              className="w-full font-semibold rounded-sm bg-button-b hover:bg-blue-600 text-white mt-4 text-sm py-1"
+            >
+              Køb nu
+            </button>
         </div>
       </a>
     </Link>
