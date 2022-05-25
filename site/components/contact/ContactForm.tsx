@@ -28,7 +28,7 @@ function ContactForm() {
             <input
               type="name"
               placeholder="fornavn"
-              className="placeholder:italic placeholder:text-slate-400 border border-gray-400 rounded-md w-full mt-4 py-1"
+              className="placeholder:italic placeholder:text-slate-400 pl-2 border border-gray-400 rounded-md w-full mt-4 py-1"
             />
           </label>
           <label className="block">
@@ -38,7 +38,7 @@ function ContactForm() {
             <input
               type="lastname"
               placeholder="efternavn"
-              className="placeholder:italic placeholder:text-slate-400 border border-gray-400 rounded-md w-full mt-4 py-1"
+              className="placeholder:italic placeholder:text-slate-400 border pl-2 border-gray-400 rounded-md w-full mt-4 py-1"
             />
           </label>
           <label className="block">
@@ -48,7 +48,7 @@ function ContactForm() {
             <input
               type="email"
               placeholder="eksempel@email.dk"
-              className="placeholder:italic placeholder:text-slate-400 border border-gray-400 rounded-md w-full mt-4 py-1"
+              className="placeholder:italic placeholder:text-slate-400 border pl-2 border-gray-400 rounded-md w-full mt-4 py-1"
             />
           </label>
           <label className="block">
@@ -58,7 +58,7 @@ function ContactForm() {
             <input
               type="phone"
               placeholder="telefon"
-              className="placeholder:italic placeholder:text-slate-400 border border-gray-400 rounded-md w-full mt-4 py-1"
+              className="placeholder:italic placeholder:text-slate-400 border pl-2 border-gray-400 rounded-md w-full mt-4 py-1"
             />
           </label>
         </div>
@@ -69,7 +69,7 @@ function ContactForm() {
             <input
               type="message"
               placeholder="Skriv en besked til os her"
-              className="placeholder:italic placeholder:text-slate-400 border-b border-black w-full mt-4 py-1 mb-10"
+              className="placeholder:italic placeholder:text-slate-400 pl-1 border-b border-black w-full mt-4 py-1 mb-10"
             />
           </label>
         <button className="float-right font-semibold rounded-md bg-button-b hover:bg-blue-600 text-white mt-4 text-sm py-2 px-10">
