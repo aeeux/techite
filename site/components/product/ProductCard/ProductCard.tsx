@@ -31,19 +31,13 @@ const ProductCard: FC<Props> = ({
     currencyCode: product.price.currencyCode!,
   })
 
-  const rootClassName = cn(
-    s.root,
-    { [s.slim]: variant === 'slim', [s.simple]: variant === 'simple' },
-    className
-  )
-
   return (
     <Link href={`/product/${product.slug}`}>
-      <a className={rootClassName} aria-label={product.name}>
+      <a className="" aria-label={product.name}>
         {variant === 'slim' && (
           <>
             <div className={s.header}>
-              <span>{product.name}</span>
+              <span className="">{product.name}</span>
             </div>
             {product?.images && (
               <div>
@@ -51,8 +45,8 @@ const ProductCard: FC<Props> = ({
                   quality="85"
                   src={product.images[0]?.url || placeholderImg}
                   alt={product.name || 'Product Image'}
-                  height={320}
-                  width={320}
+                  height={250}
+                  width={250}
                   layout="fixed"
                   {...imgProps}
                 />
@@ -70,15 +64,15 @@ const ProductCard: FC<Props> = ({
                 variant={product.variants[0]}
               />
             )}
-            <div className={s.imageContainer}>
+            <div className="">
               {product?.images && (
                 <div>
                   <Image
                     alt={product.name || 'Product Image'}
                     className={s.productImage}
                     src={product.images[0]?.url || placeholderImg}
-                    height={540}
-                    width={540}
+                    height={250}
+                    width={250}
                     quality="85"
                     layout="responsive"
                     {...imgProps}
@@ -98,15 +92,15 @@ const ProductCard: FC<Props> = ({
                 variant={product.variants[0] as any}
               />
             )}
-            <div className={s.imageContainer}>
+            <div className="bg-gray-100">
               {product?.images && (
                 <div>
                   <Image
                     alt={product.name || 'Product Image'}
                     className={s.productImage}
                     src={product.images[0]?.url || placeholderImg}
-                    height={540}
-                    width={540}
+                    height={250}
+                    width={250}
                     quality="85"
                     layout="responsive"
                     {...imgProps}
@@ -116,10 +110,12 @@ const ProductCard: FC<Props> = ({
             </div>
           </>
         )}
-        <ProductTag
-          name={product.name}
-          price={`${price} ${product.price?.currencyCode}`}
-        />
+        <div className="mt-8">
+          <ProductTag
+            name={product.name}
+            price={`${price} ${product.price?.currencyCode}`}
+          />
+        </div>
       </a>
     </Link>
   )
