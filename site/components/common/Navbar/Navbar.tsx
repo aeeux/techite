@@ -33,10 +33,10 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
                 <a className={s.link}>{l.label}</a>
               </Link>
             ))} */}
-             <Link href="/about">
+            <Link href="/about">
               <a className={s.link}>Om os</a>
             </Link>
-            <Link href="/contact">
+            <Link href="/kontakt">
               <a className={s.link}>Kontakt</a>
             </Link>
           </nav>
