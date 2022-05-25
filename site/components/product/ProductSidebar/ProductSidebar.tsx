@@ -54,8 +54,9 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         selectedOptions={selectedOptions}
         setSelectedOptions={setSelectedOptions}
       />
-      <ProductTag name={product.name} price={`${price}`} />
-      <p className="text-gray-400 text-sm mb-32">Gaming PC</p>
+      <h2 className="text-xl md:text-2xl font-semibold mb-4">{product.name}</h2>
+      <p className="text-md md:text-xl mb-2">{`${price}`}</p>
+      <p className="text-gray-400 text-sm mb-10">Gaming PC</p>
 
       <div>
         {process.env.COMMERCE_CART_ENABLED && (
@@ -73,7 +74,7 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
           </Button>
         )}
       </div>
-      <div className="mt-6">
+      <div className="mt-6 2xl:w-6/12">
         <Collapse title="Beskrivelse">
           <Text
             className="pb-4 break-words w-full max-w-xl"
