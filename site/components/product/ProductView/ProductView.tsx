@@ -70,7 +70,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
         </div>
         <div className="grid grid-cols-2">
           <div className="">
-            <div className="mx-24 mb-56">
+            <div className="mx-2 md:mx-32">
               <ProductSlider key={product.id} className="">
                 {product.images.map((image, i) => (
                   <div key={image.url} className={s.imageContainer}>
@@ -99,7 +99,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
           <ProductSidebar
             key={product.id}
             product={product}
-            className="mx-44"
+            className="mx-20 md:mx-44"
           />
         </div>
       </Container>
