@@ -115,6 +115,12 @@ const ProductCard: FC<Props> = ({
             name={product.name}
             price={`${price} ${product.price?.currencyCode}`}
           />
+          <button
+              type="button"
+              className="w-full font-semibold rounded-sm bg-button-b hover:bg-blue-600 text-white mt-4 text-sm py-1"
+            >
+              Buy now
+            </button>
         </div>
       </a>
     </Link>
