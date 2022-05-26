@@ -2,7 +2,6 @@ import Hero from '@components/about/Hero'
 import AboutUs from '@components/about/AboutUs'
 import History from '@components/about/History'
 import Newsletter from '@components/about/Newsletter'
-import Footer from '@components/common/Footer'
 import { Layout } from '@components/common'
 
 export default function About() {
@@ -12,7 +11,6 @@ export default function About() {
       <History />
       <AboutUs />
       <Newsletter />
-      <Footer />
     </div>
   )
 }
