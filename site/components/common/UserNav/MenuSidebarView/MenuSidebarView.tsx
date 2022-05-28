@@ -3,6 +3,7 @@ import s from './MenuSidebarView.module.css'
 import { useUI } from '@components/ui/context'
 import SidebarLayout from '@components/common/SidebarLayout'
 import type { Link as LinkProps } from './index'
+import { Logo, Container } from '@components/ui'
 
 export default function MenuSidebarView({
   links = [],
@@ -13,25 +14,23 @@ export default function MenuSidebarView({
 
   return (
     <SidebarLayout handleClose={() => closeSidebar()}>
-      <div className={s.root}>
+      <div className="mx-8 my-12">
         <nav>
           <ul>
-            <li className={s.item} onClick={() => closeSidebar()}>
+            <li
+              className="font-semibold text-xl space-y-10"
+              onClick={() => closeSidebar()}
+            >
               <Link href="/search">
-                <a>All</a>
+                <a className="flex">Produkter</a>
+              </Link>
+              <Link href="/about">
+                <a className="flex">Om os</a>
+              </Link>
+              <Link href="/kontakt">
+                <a className="flex">Kontakt</a>
               </Link>
             </li>
-            {links.map((l: any) => (
-              <li
-                key={l.href}
-                className={s.item}
-                onClick={() => closeSidebar()}
-              >
-                <Link href={l.href}>
-                  <a>{l.label}</a>
-                </Link>
-              </li>
-            ))}
           </ul>
         </nav>
       </div>
